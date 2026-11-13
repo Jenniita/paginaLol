@@ -3,11 +3,14 @@
     --color-azul-marino: #0A1428;
     --color-azul-oscuro: #161F32;
     --color-dorado: #C8AA6E;
+    --color-dorado-claro: #dac08e;
     --color-cian: #59C1DE;
     --color-cian-nav: rgb(11, 196, 226);
     --color-blanco: #FFFFFF;
     --color-blanco-roto: #F9F9F9;
     --color-gris-claro: #F0F0F0;
+    --color-gris: rgb(41, 41, 41);
+    --color-negro: rgb(17, 17, 17);
 
     /* Fuentes */
     --fuente-titulos: "Cinzel", Georgia, serif;
@@ -17,6 +20,18 @@
 
 /* HEADER. Falta añadir los hover */
 /* HOVER DEL HEADER */
+
+/* Al pasar el ratón: fondo gris, texto dorado y el borde de abajo se pone cian */
+header .nav-link:hover {
+    background-color: var(--color-gris);
+    color: var(--color-dorado);
+    border-bottom: 3px solid var(--color-cian-nav);
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
+    /* para redondear solo el fondo y no el borde */
+    border-radius: 8px 8px 0 0;
+}
+
+
 
 /* He puesto aquí las propiedades de los a del nav para no tener que ir copiando una a una las clases de boostrap en cada a del nav */
 nav a {
@@ -31,7 +46,6 @@ nav button {
     font-family: var(--fuente-nav);
     text-transform: uppercase;
     color: var(--color-blanco-roto);
-    /* Esto quitarlo, que se puede poner en boostrap */
     font-weight: 600;
     letter-spacing: 0.4px;
 }
@@ -40,10 +54,17 @@ body {
     background-color: var(--color-azul-oscuro);
 }
 
-.btn {
+/* boton de jugar ahora del header */
+.btn-jugar-ahora {
     background-color: var(--color-cian-nav);
     color: var(--color-azul-marino);
     letter-spacing: 0.4px;
+    border: none;
+    border-radius: 10px;
+}
+
+.btn-jugar-ahora:hover {
+    color: var(--color-dorado);
 }
 
 h1,
@@ -58,6 +79,10 @@ h2 {
     color: var(--color-azul-oscuro);
 }
 
+nav {
+    background-color: var(--color-negro);
+}
+
 
 
 /* PRIMER SECTION */
@@ -67,11 +92,17 @@ h2 {
     background-color: var(--color-dorado);
     /* Para que el borde, a diferencia del otro boton, no sea redondeado */
     border-radius: 0;
+    color: var(--color-azul-marino);
 
 
     /* Para conseguir el marco que tiene alrededor el boton amarillo del primer section usamos estas propiedes */
     outline: 1px solid var(--color-blanco-roto);
     outline-offset: 3px;
+}
+
+.amarillo:hover {
+    background-color: var(--color-dorado-claro);
+    transition: 0.3s;
 }
 
 /* Como la card de boostrap viene con bordes, y en el fondo no lo quiero, lo quitamos desde el css */
@@ -86,6 +117,11 @@ h2 {
     background-image: url("../img/fondoSegundoSection.png")
 }
 
+.section-destacadas h2 {
+    font-weight: 700;
+    font-family: var(--fuente-titulos);
+}
+
 /* h4, que tienen las tarjetas del segundo section */
 h4 {
     color: var(--color-azul-oscuro);
@@ -97,6 +133,7 @@ h4 {
 .tarjeta {
     color: var(--color-azul-oscuro);
     background-color: transparent;
+
 }
 
 .subtitulo-tarjetas {
@@ -105,9 +142,22 @@ h4 {
     font-size: 0.85rem;
 }
 
+
+
 .tarjeta img {
     border: none;
     border-radius: 0;
+
+}
+
+.div-imagenes-tarjeta {
+    /* para que todo lo que se salga de este div, se esconda, en este caso, es para el hover,para que cuando se agrande la imagen, lo sobrante se esconda */
+    overflow: hidden;
+}
+
+.imagen-tarjeta:hover {
+    scale: 120%;
+    transition: 0.3s;
 }
 
 .parrafo-card p {
@@ -120,8 +170,24 @@ h4 {
 }
 
 /* TERCER SECTION */
+/* fondo del tercer section */
 .section-campeon {
-    background-image: url("../img/fondoTercerSection.webp");
+    background-image: url("../img/fondoasesino.webp");
+    background-repeat: no-repeat;
+    /* para que la imagen ocupe todo el section */
+    background-size: min(100%);
+    /* para que esté centrada */
+    background-position: center;
+    background-color: var(--color-blanco-roto);
+    color: var(--color-azul-marino);
+}
+
+.section-campeon p {
+    font-family: var(--fuente-texto);
+}
+
+.section-campeon ul li {
+    text-transform: uppercase;
 }
 
 .texto-campeon {
@@ -130,6 +196,7 @@ h4 {
 
 .section-campeon ul li {
     color: var(--color-azul-oscuro);
+    opacity: 50%;
 }
 
 .div-akali {
@@ -139,6 +206,26 @@ h4 {
 .div-akali h3 {
     font-family: var(--fuente-texto);
 }
+
+.btn-campeones {
+    background-color: var(--color-dorado);
+    border-radius: 0;
+    color: var(--color-azul-marino);
+}
+
+.btn-jugar-ahora-akali {
+    background-color: var(--color-cian);
+    border-radius: 0;
+    color: var(--color-azul-marino);
+}
+
+/* HOVER ICONOS */
+.section-campeon ul li:hover {
+    opacity: 100%;
+    scale: 120%;
+    transition: 0.3s;
+}
+
 
 /* CUARTO SECTION */
 .section-estilo {
@@ -185,16 +272,16 @@ h4 {
 
 /* FOOTER */
 
-footer{
-    background-color: var(--color-azul-oscuro);
+footer {
+    background-color: var(--color-negro);
 }
 
 /* para que todos los iconos del footer sean blancos, cambiamos el color con fill */
-footer svg{
+footer svg {
     fill: var(--color-blanco);
 }
 
-.lista-iconos a{
+.lista-iconos a {
     /* Para que los a tengan fondo, ponemos estas propiedades */
     display: flex;
     justify-content: center;
@@ -202,7 +289,11 @@ footer svg{
     width: 2rem;
     height: 2rem;
     border-radius: 13px;
-    background-color: #59C1DE;
+    background-color: var(--color-gris);
+}
+
+footer nav {
+    background-color: var(--color-gris);
 }
 
 

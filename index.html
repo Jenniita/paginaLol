@@ -17,6 +17,7 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+    <script src="js/script.js" defer></script>
 </head>
 
 <body>
@@ -68,8 +69,14 @@
                             </li>
                             <!-- Item menú que se desplega -->
                             <li class="nav-item">
-                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                <button class="nav-link d-flex align-items-center gap-2" type="button"
+                                    data-bs-toggle="menu" aria-expanded="false">
                                     Campeones
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
                                 </button>
                                 <!-- Cada opción del menú -->
                                 <div class="menu">
@@ -86,8 +93,14 @@
                             </li>
                             <!-- Item menú que se desplega -->
                             <li class="nav-item">
-                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                <button class="nav-link d-flex align-items-center gap-2" type="button"
+                                    data-bs-toggle="menu" aria-expanded="false">
                                     Noticias
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
                                 </button>
                                 <!-- Cada opción del menú -->
                                 <div class="menu">
@@ -104,8 +117,14 @@
                             </li>
                             <!-- Item menú que se desplega -->
                             <li class="nav-item">
-                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                <button class="nav-link d-flex align-items-center gap-2" type="button"
+                                    data-bs-toggle="menu" aria-expanded="false">
                                     Descubrir
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor"
+                                        class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                        <path
+                                            d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                                    </svg>
                                 </button>
                                 <!-- Cada opción del menú -->
                                 <div class="menu">
@@ -151,7 +170,7 @@
                                 d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
                                 fill="#E8E8E8"></path>
                         </svg>
-                        <button type="button" class="btn btn-sm px-5">Jugar Ahora</button>
+                        <button type="button" class="btn-jugar-ahora py-2 btn-sm px-5">Jugar Ahora</button>
                     </div>
                 </dialog>
             </div>
@@ -187,7 +206,7 @@
                         </div>
 
                         <div class="d-grid md:d-block text-center">
-                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                            <button class="btn amarillo px-9 py-6 md:px-12 text-uppercase">Jugar Gratis</button>
                         </div>
 
                     </div>
@@ -198,11 +217,11 @@
 
         <section class="section-destacadas">
             <div class="container">
-                <h2 class="py-9">Noticias Destacadas</h2>
+                <h2 class="py-9 fst-italic text-uppercase">Noticias Destacadas</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3">
                     <div class="tarjeta card ">
-                        <div class="position-relative">
-                            <img src="img/segundoSectionImagen1.png" class="card-img-top" alt="...">
+                        <div class="div-imagenes-tarjeta position-relative">
+                            <img src="img/segundoSectionImagen1.png" class="imagen-tarjeta card-img-top" alt="...">
                             <img src="img/iconoflecha.svg" class="img-fluid w-3 position-absolute bottom-0 end-0"
                                 alt="...">
                         </div>
@@ -222,8 +241,8 @@
                     </div>
 
                     <div class="tarjeta card">
-                        <div class="position-relative">
-                            <img src="img/imagenSegundoSection2.webp" class="card-img-top" alt="...">
+                        <div class="div-imagenes-tarjeta position-relative">
+                            <img src="img/imagenSegundoSection2.webp" class="imagen-tarjeta card-img-top" alt="...">
                             <img src="img/iconoflecha.svg" class="img-fluid w-3 position-absolute bottom-0 end-0"
                                 alt="...">
                         </div>
@@ -241,8 +260,8 @@
                     </div>
 
                     <div class="tarjeta card">
-                        <div class="position-relative">
-                            <img src="img/imagenSegundoSection3.webp" class="card-img-top" alt="...">
+                        <div class="div-imagenes-tarjeta position-relative">
+                            <img src="img/imagenSegundoSection3.webp" class="imagen-tarjeta card-img-top" alt="...">
                             <img src="img/iconoplay.svg"
                                 class="img-fluid w-3 position-absolute top-50 start-50 translate-middle" alt="...">
                         </div>
@@ -262,50 +281,48 @@
         </section>
 
         <section class="section-campeon py-12">
-            <div class="d-flex align-items-center">
+            <div class="d-flex align-items-center justify-content-center">
                 <div>
                     <div class="container text-center ">
                         <div class="row justify-content-center">
-                            <h2>Elige a tu campeon</h2>
+                            <p class="text-uppercase fs-lg">Elige a tu</p>
+                            <h2 class="fs-6xl fst-italic">campeon</h2>
                         </div>
 
                         <div class="row justify-content-center">
-                            <!-- text center y text balance para que el texto quede centrado y la cantidad de palabras balanceada en las dos filas -->
-                            <p class="texto-campeon col-12 md:col-6 my-9 fs-lg">Lanzarse en medio del combate, apoyar a
+                            <p class="texto-campeon col-12 md:col-8 my-9 fs-lg lh-lg">Lanzarse en medio del combate, apoyar a
                                 tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
                         </div>
 
-                        <div class="d-grid md:d-block text-center">
-                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
-                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        <div class="d-grid md:d-flex md:justify-content-center gap-4">
+                            <button class="btn btn-campeones px-9 py-6  md:px-12 text-uppercase">Descubrir campeones</button>
+                            <button class="btn btn-jugar-ahora-akali px-9 py-6 md:px-12 text-uppercase">Jugar Ahora</button>
                         </div>
 
-                        <ul class="d-flex justify-content-center gap-6 list-unstyled mt-9">
-                            <li>
-
+                        <ul class="d-flex justify-content-center gap-6 list-unstyled mt-9 fs-sm">
+                            <li class="btn-rol activo">
                                 <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
-
+                                <p>Asesinos</p>
                             </li>
-                            <li>
+                            <li class="btn-rol">
                                 <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
+                                <p>Luchadores</p>
                             </li>
-                            <li>
+                            <li class="btn-rol">
                                 <img src="img/iconomago.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
+                                <p>Magos</p>
                             </li>
-                            <li>
+                            <li class="btn-rol">
                                 <img src="img/iconotirador.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
+                                <p>Tiradores</p>
                             </li>
-                            <li>
+                            <li class="btn-rol">
                                 <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
+                                <p>Apoyos</p>
                             </li>
-                            <li>
+                            <li class="btn-rol">
                                 <img src="img/iconotanque.webp" class="img-fluid" alt="...">
-                                <p>Asesino</p>
+                                <p>Tanques</p>
                             </li>
                         </ul>
 
@@ -314,10 +331,10 @@
                 </div>
 
                 <div>
-                    <img src="img/akali.webp" class="img-fluid" alt="...">
+                    <img src="img/akali.webp" class="img-fluid personaje" alt="...">
                     <div class="div-akali text-center">
-                        <h3 class="text-uppercase fst-italic fw-bold mb-3">Akali</h3>
-                        <p>La Asesina Sigilosa</p>
+                        <h3 class="text-uppercase fst-italic fw-bold mb-3 nombre-personaje">Akali</h3>
+                        <p class="desc-personaje">La Asesina Sigilosa</p>
                     </div>
                 </div>
 
@@ -435,7 +452,7 @@
 
     </main>
 
-    <footer class="d-flex flex-column">
+    <footer class="d-flex flex-column text-center gap-6 pb-7">
         <!-- Nav que hay debajo -->
         <nav class="navbar xl:navbar-expand bg-1 py-7 text-uppercase fs-sm">
             <div class="container-fluid px-6 md:px-11 justify-content-center">
@@ -505,6 +522,25 @@
             </ul>
         </div>
 
+        <img src="img/logoRiot.png" class="img-fluid align-self-center mb-4" alt="Logo de Riot Games" width="120"
+            height="40">
+
+        <p class="w-50 align-self-center">™ & © 2026 Riot Games, Inc. Todos los derechos reservados. Riot Games, League
+            of Legends y PvP.net son marcas
+            comerciales o marcas registradas de Riot Games, Inc.</p>
+
+        <div class="text-uppercase fw-bold">
+            <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4">
+                <li>Aviso de privacidad</li>
+                <li>Términos de uso</li>
+                <li>Políticas de cookies</li>
+                <li>Información de la empresa</li>
+                <li>Prefencias de cookies</li>
+            </ul>
+        </div>
+
+        <img src="img/imagenfinalfooter.png" class="img-fluid align-self-center mb-4" alt="Logo de Riot Games"
+            width="335" height="100">
 
     </footer>
 
