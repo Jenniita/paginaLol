@@ -230,7 +230,9 @@ h4 {
 /* CUARTO SECTION */
 .section-estilo {
     background-image: url("../img/fondocuartoSection.webp");
+    /* Esta propiedad es para que el fondo ocupe todo el section. Me ayudó una compañera */
     background-size: cover;
+    /* Esto es para que el icono que se usa de fondo, quede centrado */
     background-position: center;
 }
 
@@ -246,6 +248,8 @@ h4 {
 /* QUINTO SECTION */
 .section-formas {
     background-image: url("../img/fondoquintoSection.webp");
+    /* Esta propiedad es para que el fondo ocupe todo el section. Me ayudó una compañera */
+    background-size: cover;
 }
 
 .section-formas p {
@@ -258,9 +262,12 @@ h4 {
 
 .video-section {
     border-radius: 50%;
-    width: 600px;
-    outline: 1px solid var(--color-blanco-roto);
+    width: 100%;
+    max-width: 600px;
+    outline: 2px solid var(--color-blanco-roto);
     outline-offset: 20px;
+    /* El aspect ratio lo he tenido que buscar en Claude porque sino el video me quedaba en el móvil como un huevito */
+    aspect-ratio: 1/1;
 }
 
 /* SEXTO SECTION */
@@ -301,5 +308,10 @@ footer nav {
 @media (max-width: 425px) {
     video {
         aspect-ratio: 4/5;
+    }
+
+    .video-section {
+        outline-offset: 10px;
+
     }
 }

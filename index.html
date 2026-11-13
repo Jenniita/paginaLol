@@ -281,89 +281,94 @@
         </section>
 
         <section class="section-campeon py-12">
-            <div class="d-flex align-items-center justify-content-center">
-                <div>
-                    <div class="container text-center ">
-                        <div class="row justify-content-center">
-                            <p class="text-uppercase fs-lg">Elige a tu</p>
-                            <h2 class="fs-6xl fst-italic">campeon</h2>
+            <div class="container">
+                <!-- Para la responsividad ponemos que en el movil se ponga en columna, y en el ordenador flex-row. La explicación del md y la responsividad me la ha explicado Claude, siendo parte de las clases de boostrap -->
+                <div class="d-flex flex-column md:flex-row align-items-center justify-content-center">
+                    <div>
+                        <div class="text-center ">
+                            <div class="row justify-content-center">
+                                <p class="text-uppercase fs-lg">Elige a tu</p>
+                                <h2 class="fs-6xl fst-italic">campeon</h2>
+                            </div>
+
+                            <div class="row justify-content-center">
+                                <p class="texto-campeon col-12 md:col-8 my-9 fs-lg lh-lg">Lanzarse en medio del combate,
+                                    apoyar a
+                                    tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
+                            </div>
+
+                            <div class="d-grid md:d-flex md:justify-content-center gap-4">
+                                <button class="btn btn-campeones px-9 py-6  md:px-12 text-uppercase">Descubrir
+                                    campeones</button>
+                                <button class="btn btn-jugar-ahora-akali px-9 py-6 md:px-12 text-uppercase">Jugar
+                                    Ahora</button>
+                            </div>
+
+                            <!-- Añadimos flex-wrap al ul para que en el movil los iconos se apilen uno debajo del otro -->
+                            <ul class="d-flex justify-content-center flex-wrap gap-6 list-unstyled mt-9 fs-sm">
+                                <li class="btn-rol activo">
+                                    <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
+                                    <p>Asesinos</p>
+                                </li>
+                                <li class="btn-rol">
+                                    <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
+                                    <p>Luchadores</p>
+                                </li>
+                                <li class="btn-rol">
+                                    <img src="img/iconomago.webp" class="img-fluid" alt="...">
+                                    <p>Magos</p>
+                                </li>
+                                <li class="btn-rol">
+                                    <img src="img/iconotirador.webp" class="img-fluid" alt="...">
+                                    <p>Tiradores</p>
+                                </li>
+                                <li class="btn-rol">
+                                    <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
+                                    <p>Apoyos</p>
+                                </li>
+                                <li class="btn-rol">
+                                    <img src="img/iconotanque.webp" class="img-fluid" alt="...">
+                                    <p>Tanques</p>
+                                </li>
+                            </ul>
                         </div>
+                    </div>
 
-                        <div class="row justify-content-center">
-                            <p class="texto-campeon col-12 md:col-8 my-9 fs-lg lh-lg">Lanzarse en medio del combate, apoyar a
-                                tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
+                    <div>
+                        <img src="img/akali.webp" class="img-fluid personaje" alt="...">
+                        <div class="div-akali text-center">
+                            <h3 class="text-uppercase fst-italic fw-bold mb-3 nombre-personaje">Akali</h3>
+                            <p class="desc-personaje">La Asesina Sigilosa</p>
                         </div>
-
-                        <div class="d-grid md:d-flex md:justify-content-center gap-4">
-                            <button class="btn btn-campeones px-9 py-6  md:px-12 text-uppercase">Descubrir campeones</button>
-                            <button class="btn btn-jugar-ahora-akali px-9 py-6 md:px-12 text-uppercase">Jugar Ahora</button>
-                        </div>
-
-                        <ul class="d-flex justify-content-center gap-6 list-unstyled mt-9 fs-sm">
-                            <li class="btn-rol activo">
-                                <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
-                                <p>Asesinos</p>
-                            </li>
-                            <li class="btn-rol">
-                                <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
-                                <p>Luchadores</p>
-                            </li>
-                            <li class="btn-rol">
-                                <img src="img/iconomago.webp" class="img-fluid" alt="...">
-                                <p>Magos</p>
-                            </li>
-                            <li class="btn-rol">
-                                <img src="img/iconotirador.webp" class="img-fluid" alt="...">
-                                <p>Tiradores</p>
-                            </li>
-                            <li class="btn-rol">
-                                <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
-                                <p>Apoyos</p>
-                            </li>
-                            <li class="btn-rol">
-                                <img src="img/iconotanque.webp" class="img-fluid" alt="...">
-                                <p>Tanques</p>
-                            </li>
-                        </ul>
-
                     </div>
 
                 </div>
-
-                <div>
-                    <img src="img/akali.webp" class="img-fluid personaje" alt="...">
-                    <div class="div-akali text-center">
-                        <h3 class="text-uppercase fst-italic fw-bold mb-3 nombre-personaje">Akali</h3>
-                        <p class="desc-personaje">La Asesina Sigilosa</p>
-                    </div>
-                </div>
-
             </div>
-
-            </div>
-
         </section>
 
 
 
 
         <section class="section-estilo py-12">
-            <div class="d-flex align-items-center justify-content-center gap-12">
-                <div class="imagen-estilo">
-                    <img src="img/akali2.webp" class="img-fluid" alt="...">
-                </div>
+            <div class="container">
+                <div class="d-flex flex-column md:flex-row align-items-center justify-content-center gap-12">
+                    <div class="imagen-estilo">
+                        <img src="img/akali2.webp" class="img-fluid" alt="...">
+                    </div>
 
-                <div class="texto-estilo text-start">
-                    <p>Aplasta con</p>
-                    <h2>Estilo</h2>
-                    <p class="texto-campeon my-6 fs-lg">Personaliza tu experiencia con aspectos para tus campeones
-                        favoritos.</p>
+                    <div class="texto-estilo text-start">
+                        <p>Aplasta con</p>
+                        <h2>Estilo</h2>
+                        <p class="texto-campeon my-6 fs-lg">Personaliza tu experiencia con aspectos para tus campeones
+                            favoritos.</p>
 
-                    <div class="d-grid md:d-block">
-                        <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        <div class="d-grid md:d-block">
+                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        </div>
                     </div>
                 </div>
             </div>
+
 
         </section>
 
@@ -403,7 +408,7 @@
                     </div>
 
                     <div class="col-12 md:col-6 text-center">
-                        <video autoplay="" data-testid="icon-tab-media" class="video-section" muted="" loop=""
+                        <video autoplay="" data-testid="icon-tab-media" class="video-section img-fluid" muted="" loop=""
                             playsinline="">
                             <source data-testid="source-video/mp4"
                                 src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/bbc27473157462adacf0de441a8796268eb2d0ac.mp4?accountingTag=LoL"
