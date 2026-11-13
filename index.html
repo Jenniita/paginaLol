@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>League of Legends</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600;700&family=Source+Sans+3:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header class="sticky-top">
+        <nav class="navbar xl:navbar-expand bg-1 py-7 text-uppercase fs-sm">
+            <div class="container-fluid px-6 md:px-11">
+                <a class="navbar-brand d-flex gap-5 " href="#">
+                    <img src="img/logoRiot.png" alt="logoRiot" width="90" height="30"
+                        class="d-inline-block align-text-top">
+                    <img src="img/iconoLol.svg" alt="logoLol" width="50" height="30"
+                        class="d-inline-block align-text-top">
+
+                </a>
+
+                <div>
+                    <!-- Icono en el MOVIL del globito -->
+                    <!-- Icono del mundo sacado directamente de la página copiando su svg entero-->
+                    <svg class="md:d-none" width="14" height="14" viewBox="0 0 16 16">
+                        <title>globeIcon</title>
+                        <path
+                            d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+                            fill="#E8E8E8"></path>
+                    </svg>
+
+                    <!-- Boton hamburguesa para el movil -->
+                    <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
+                        data-bs-target="#navbarDrawer" aria-controls="navbarDrawer" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                    </button>
+                </div>
+                <!-- Panel lateral cuando se abre el menú hamburguesa (drawer), dialog es para ventanas que se abren por encima-->
+                <dialog class="drawer drawer-end" tabindex="-1" id="navbarDrawer" aria-labelledby="navbarDrawerLabel">
+                    <!-- Parte de arriba del panel, con título y el botón para cerrar -->
+                    <div class="drawer-header">
+                        <h5 class="drawer-title" id="navbarDrawerLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                    <!-- Lo que hay dentro, es decir, los enlaces y el buscador -->
+                    <div class="drawer-body mb-2 md:mb-0">
+                        <!-- Lista de enlaces -->
+                        <ul class="nav navbar-nav me-auto">
+                            <!-- Cada elemento de la lista -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Resumen del juego</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">League of legends classic</a>
+                            </li>
+                            <!-- Item menú que se desplega -->
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    Campeones
+                                </button>
+                                <!-- Cada opción del menú -->
+                                <div class="menu">
+                                    <a class="menu-item" href="#">League of Legends</a>
+                                    <a class="menu-item" href="#">Lol classic</a>
+                                </div>
+                            </li>
+                            <!-- Cada elemento de la lista -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Notas de la versión</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Asistencia</a>
+                            </li>
+                            <!-- Item menú que se desplega -->
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    Noticias
+                                </button>
+                                <!-- Cada opción del menú -->
+                                <div class="menu">
+                                    <a class="menu-item" href="#">Todas</a>
+                                    <a class="menu-item" href="#">Actualizaciones del juego</a>
+                                    <a class="menu-item" href="#">Esports</a>
+                                    <a class="menu-item" href="#">Desarrollo</a>
+                                    <a class="menu-item" href="#">Historias</a>
+                                    <a class="menu-item" href="#">Multimedia</a>
+                                    <a class="menu-item" href="#">Merchandising</a>
+                                    <a class="menu-item" href="#">Comunidad</a>
+                                    <a class="menu-item" href="#">Riot Games</a>
+                                </div>
+                            </li>
+                            <!-- Item menú que se desplega -->
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    Descubrir
+                                </button>
+                                <!-- Cada opción del menú -->
+                                <div class="menu">
+                                    <a class="menu-item" href="#">Esports</a>
+                                    <a class="menu-item" href="#">Universe</a>
+                                    <a class="menu-item" href="#">Merchandising</a>
+                                    <a class="menu-item" href="#">League Displays</a>
+                                    <a class="menu-item" href="#">Hall of Legends</a>
+                                    <a class="menu-item" href="#">Riot Mobile</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <!-- El buscador -->
+                        <!-- En el MOVIL, el form se queda normal y se oculta en el escritorio-->
+                        <form class="hstack gap-2 md:d-none" role="search">
+                            <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
+                            <button class="btn-solid btn-icon theme-secondary" type="submit">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </form>
+
+                        <!-- En el ESCRITORIO se queda solo la lupa, el icono, que despliega el buscador -->
+                        <div class="d-none md:d-block">
+                            <button class="btn-icon" type="button" data-bs-toggle="menu"
+                                data-bs-placement="bottom lg:right" aria-expanded="false" aria-label="Abrir buscador">
+                                <i class="bi bi-search"></i>
+                            </button>
+                            <div class="menu p-3">
+                                <form class="hstack gap-2" role="search">
+                                    <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar">
+                                    <button class="btn-solid btn-icon theme-secondary" type="submit">
+                                        <i class="bi bi-search"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+
+                        <!-- Icono en el MOVIL del globito -->
+                        <!-- Icono del mundo sacado directamente de la página copiando su svg entero-->
+                        <svg class="d-none md:d-block" width="14" height="14" viewBox="0 0 16 16">
+                            <title>globeIcon</title>
+                            <path
+                                d="M7.992 0C3.576 0 0 3.584 0 8s3.576 8 7.992 8C12.416 16 16 12.416 16 8s-3.584-8-8.008-8Zm5.544 4.8h-2.36c-.256-1-.624-1.96-1.104-2.848A6.424 6.424 0 0 1 13.536 4.8ZM8 1.632A11.27 11.27 0 0 1 9.528 4.8H6.472A11.27 11.27 0 0 1 8 1.632ZM1.808 9.6A6.594 6.594 0 0 1 1.6 8c0-.552.08-1.088.208-1.6h2.704A13.212 13.212 0 0 0 4.4 8c0 .544.048 1.072.112 1.6H1.808Zm.656 1.6h2.36c.256 1 .624 1.96 1.104 2.848A6.39 6.39 0 0 1 2.464 11.2Zm2.36-6.4h-2.36a6.39 6.39 0 0 1 3.464-2.848A12.52 12.52 0 0 0 4.824 4.8ZM8 14.368A11.27 11.27 0 0 1 6.472 11.2h3.056A11.27 11.27 0 0 1 8 14.368ZM9.872 9.6H6.128A11.77 11.77 0 0 1 6 8c0-.544.056-1.08.128-1.6h3.744C9.944 6.92 10 7.456 10 8s-.056 1.072-.128 1.6Zm.2 4.448a12.52 12.52 0 0 0 1.104-2.848h2.36a6.424 6.424 0 0 1-3.464 2.848ZM11.488 9.6c.064-.528.112-1.056.112-1.6s-.048-1.072-.112-1.6h2.704c.128.512.208 1.048.208 1.6s-.08 1.088-.208 1.6h-2.704Z"
+                                fill="#E8E8E8"></path>
+                        </svg>
+                        <button type="button" class="btn btn-sm px-5">Jugar Ahora</button>
+                    </div>
+                </dialog>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section-jugar">
+            <div class="card theme-inverse">
+                <!-- El video, lo sacamos de la página del lol, copiando su vinculo y lo pegamos tal cual aquí, cambiando la clase que tiene por la de boostrap que queremos -->
+                <!-- Para reducir el tamaño del video, he usado ratio-21x9 -->
+                <video data-testid="backdrop-background" autoplay="" class="object-fit-cover ratio-21x9" muted=""
+                    loop="" playsinline="">
+                    <source data-testid="source-video/webm"
+                        src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/8ab3e227121c53aacab0c9b9f7a48adbc65db520.webm?accountingTag=LoL"
+                        type="video/webm">
+                </video>
+                <div class="card-img-overlay d-flex align-items-center">
+                    <div class="container text-center">
+                        <div class="row justify-content-center">
+                            <a class="col-9 md:col-3" href="#">
+                                <img src="img/leagueoflegends.png" class="img-fluid" alt=""></a>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <!-- text center y text balance para que el texto quede centrado y la cantidad de palabras balanceada en las dos filas -->
+                            <h1 class="col-12 md:col-6 my-9 fst-italic text-balance fw-bold fs-lg">League of Legends: Un
+                                MOBA
+                                5v5 en
+                                el que los equipos se enfrentan para destruir
+                                el nexo
+                                enemigo</h1>
+                        </div>
+
+                        <div class="d-grid md:d-block text-center">
+                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-destacadas">
+            <div class="container">
+                <h2 class="py-9">Noticias Destacadas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3">
+                    <div class="tarjeta card ">
+                        <div class="position-relative">
+                            <img src="img/segundoSectionImagen1.png" class="card-img-top" alt="...">
+                            <img src="img/iconoflecha.svg" class="img-fluid w-3 position-absolute bottom-0 end-0"
+                                alt="...">
+                        </div>
+
+                        <div class="card-body p-0">
+                            <div class="parrafo-card d-flex gap-2 mt-4 text text-uppercase">
+                                <p class="subtitulo-tarjetas">Esports</p>
+                                <p>| 10/11/2026</p>
+                            </div>
+
+                            <h4 class="card-title">Ceremonia de apertura del Mundial 2026 presentada por
+                                Mastercard</h4>
+                            <p class="card-text">La música, los efectos visuales y la energía preparan escenario
+                                para la final del Campeonato Mundial de League of Legends 2026</p>
+
+                        </div>
+                    </div>
+
+                    <div class="tarjeta card">
+                        <div class="position-relative">
+                            <img src="img/imagenSegundoSection2.webp" class="card-img-top" alt="...">
+                            <img src="img/iconoflecha.svg" class="img-fluid w-3 position-absolute bottom-0 end-0"
+                                alt="...">
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="parrafo-card d-flex gap-2 mt-4 text text-uppercase">
+                                <p class="subtitulo-tarjetas">Multimedia</p>
+                                <p>| 10/11/2026</p>
+                            </div>
+
+                            <h4 class="card-title">Tráiler de la apertura de la final: Mundial 2026</h4>
+                            <p class="card-text">True Damage + K/DA. No os perdais nada de la ceremonia de
+                                apertura de la final del Mundial de 2026</p>
+
+                        </div>
+                    </div>
+
+                    <div class="tarjeta card">
+                        <div class="position-relative">
+                            <img src="img/imagenSegundoSection3.webp" class="card-img-top" alt="...">
+                            <img src="img/iconoplay.svg"
+                                class="img-fluid w-3 position-absolute top-50 start-50 translate-middle" alt="...">
+                        </div>
+                        <div class="card-body p-0">
+                            <div class="parrafo-card d-flex gap-2 mt-4 text text-uppercase">
+                                <p class="subtitulo-tarjetas">Actualizaciones del juego</p>
+                                <p>| 9/11/2026</p>
+                            </div>
+
+                            <h4 class="card-title">Liberad la banda de cuervos</h4>
+                            <p class="card-text">Swain, Volibear y Elise ya están disponibles en LoL Classic</p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-campeon py-12">
+            <div class="d-flex align-items-center">
+                <div>
+                    <div class="container text-center ">
+                        <div class="row justify-content-center">
+                            <h2>Elige a tu campeon</h2>
+                        </div>
+
+                        <div class="row justify-content-center">
+                            <!-- text center y text balance para que el texto quede centrado y la cantidad de palabras balanceada en las dos filas -->
+                            <p class="texto-campeon col-12 md:col-6 my-9 fs-lg">Lanzarse en medio del combate, apoyar a
+                                tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
+                        </div>
+
+                        <div class="d-grid md:d-block text-center">
+                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        </div>
+
+                        <ul class="d-flex justify-content-center gap-6 list-unstyled mt-9">
+                            <li>
+
+                                <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+
+                            </li>
+                            <li>
+                                <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+                            </li>
+                            <li>
+                                <img src="img/iconomago.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+                            </li>
+                            <li>
+                                <img src="img/iconotirador.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+                            </li>
+                            <li>
+                                <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+                            </li>
+                            <li>
+                                <img src="img/iconotanque.webp" class="img-fluid" alt="...">
+                                <p>Asesino</p>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <div>
+                    <img src="img/akali.webp" class="img-fluid" alt="...">
+                    <div class="div-akali text-center">
+                        <h3 class="text-uppercase fst-italic fw-bold mb-3">Akali</h3>
+                        <p>La Asesina Sigilosa</p>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+
+        </section>
+
+
+
+
+        <section class="section-estilo py-12">
+            <div class="d-flex align-items-center justify-content-center gap-12">
+                <div class="imagen-estilo">
+                    <img src="img/akali2.webp" class="img-fluid" alt="...">
+                </div>
+
+                <div class="texto-estilo text-start">
+                    <p>Aplasta con</p>
+                    <h2>Estilo</h2>
+                    <p class="texto-campeon my-6 fs-lg">Personaliza tu experiencia con aspectos para tus campeones
+                        favoritos.</p>
+
+                    <div class="d-grid md:d-block">
+                        <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section-formas py-12">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-12 md:col-6">
+                        <div class="text-center text-uppercase">
+                            <p>Varias formas de</p>
+                            <h3>Jugar</h3>
+
+                            <div class="d-grid md:d-block text-center mt-9">
+                                <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar
+                                    Gratis</button>
+                            </div>
+                        </div>
+
+                        <ul class="d-flex text-center justify-content-center gap-6 list-unstyled mt-9 text-uppercase">
+                            <li>
+                                <img src="img/grieta.webp" class="img-fluid" alt="...">
+                                <p class="mt-4">Grieta del invocador</p>
+                            </li>
+                            <li>
+                                <img src="img/aram.webp" class="img-fluid" alt="...">
+                                <p class="mt-4">Aram</p>
+                            </li>
+                            <li>
+                                <img src="img/aramcaos.webp" class="img-fluid" alt="...">
+                                <p class="mt-4">Aram:Caos</p>
+                            </li>
+                            <li>
+                                <img src="img/tft.webp" class="img-fluid" alt="...">
+                                <p class="mt-4">Teamfigth tactics</p>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <div class="col-12 md:col-6 text-center">
+                        <video autoplay="" data-testid="icon-tab-media" class="video-section" muted="" loop=""
+                            playsinline="">
+                            <source data-testid="source-video/mp4"
+                                src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/bbc27473157462adacf0de441a8796268eb2d0ac.mp4?accountingTag=LoL"
+                                type="video/mp4">
+                        </video>
+                        <div class="text-center mt-9">
+                            <h3 class="text-uppercase fst-italic fw-bold mb-3">El modo de juego más popular</h3>
+                            <p>Despeja tu calle, lánzate a épicos combates de equipo cinco contra cinco y destruye el
+                                nexo
+                                enemigo antes de que destruyan el tuyo.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+        <section class="section-jugar-final">
+            <div class="card theme-inverse">
+                <!-- El video, lo sacamos de la página del lol, copiando su vinculo y lo pegamos tal cual aquí, cambiando la clase que tiene por la de boostrap que queremos -->
+                <!-- Para reducir el tamaño del video, he usado ratio-21x9 -->
+                <video data-testid="backdrop-embed-video" autoplay="" class="object-fit-cover ratio-21x9" muted=""
+                    loop="" playsinline="">
+                    <source data-testid="source-video/mp4"
+                        src="https://cmsassets.rgpub.io/sanity/files/dsfx7636/news/1f5b2cf01a1cf2afa1ce61febee6e2e900808347.mp4?accountingTag=LoL"
+                        type="video/mp4">
+                </video>
+                <div class="card-img-overlay d-flex align-items-center">
+                    <div class="container text-center">
+                        <div class="d-grid md:d-block text-center">
+                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+
+    </main>
+
+    <footer class="d-flex flex-column">
+        <!-- Nav que hay debajo -->
+        <nav class="navbar xl:navbar-expand bg-1 py-7 text-uppercase fs-sm">
+            <div class="container-fluid px-6 md:px-11 justify-content-center">
+                <ul class="nav navbar-nav mx-auto">
+                    <!-- Cada elemento de la lista -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Acerca de League of Legends</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Estado del Servidor</a>
+                    </li>
+                    <!-- Cada elemento de la lista -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Asistencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Web lol Esports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Descarga la aplicación para móviles de riot mobile</a>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+        <div class="py-4">
+            <ul class="lista-iconos list-unstyled d-flex justify-content-center align-items-center gap-4 m-0">
+                <li><a href="https://www.youtube.com/LeagueofLegendsES" target="_blank"
+                        data-testid="riotbar:footer:social-youtube"><svg width="20" height="20"
+                            viewBox="0 0 16.67 11.67">
+                            <title>youtube</title>
+                            <path
+                                d="M14.85.36a2.08 2.08 0 0 1 1.47 1.47 20.5 20.5 0 0 1 .34 4 22.19 22.19 0 0 1-.34 4 2.1 2.1 0 0 1-1.47 1.47 51.13 51.13 0 0 1-6.52.34 48.46 48.46 0 0 1-6.52-.36A2.07 2.07 0 0 1 .34 9.82a23.82 23.82 0 0 1 0-8A2.11 2.11 0 0 1 1.81.34a49.68 49.68 0 0 1 6.52-.35 48.31 48.31 0 0 1 6.52.37Zm-3.84 5.48-4.34 2.5v-5Z">
+                            </path>
+                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Youtube</span></a>
+                </li>
+                <li><a href="https://twitter.com/lol_es" target="_blank"
+                        data-testid="riotbar:footer:social-twitter"><svg width="20" height="20" viewBox="0 0 1200 1227">
+                            <title>twitter</title>
+                            <path
+                                d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z">
+                            </path>
+                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Twitter</span></a>
+                </li>
+                <li><a href="https://www.instagram.com/leagueoflegends/" target="_blank"
+                        data-testid="riotbar:footer:social-instagram"><svg width="20" height="20"
+                            viewBox="0 0 13.26 13.3">
+                            <title>instagram</title>
+                            <path
+                                d="M6.67 3.24a3.43 3.43 0 1 0 3.42 3.44 3.43 3.43 0 0 0-3.42-3.44Zm0 5.65a2.22 2.22 0 1 1 2.22-2.22 2.21 2.21 0 0 1-2.22 2.22Z"
+                                transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
+                            <path d="M11 3.08a.8.8 0 1 1-.8-.8.8.8 0 0 1 .8.8Z" transform="translate(-.04 .05)"
+                                style="fill:#fdfefe"></path>
+                            <path
+                                d="M6.67 0H3.92A5 5 0 0 0 2.3.31a3.31 3.31 0 0 0-1.18.77 3.31 3.31 0 0 0-.77 1.18A5.29 5.29 0 0 0 0 3.88v5.5A5.22 5.22 0 0 0 .35 11a3.35 3.35 0 0 0 .77 1.19 3.42 3.42 0 0 0 1.18.76 4.75 4.75 0 0 0 1.62.31h5.5a4.75 4.75 0 0 0 1.58-.32 3.15 3.15 0 0 0 1.18-.76A3.35 3.35 0 0 0 13 11a5 5 0 0 0 .31-1.61V3.88A5 5 0 0 0 13 2.26a3.46 3.46 0 0 0-2-2A5 5 0 0 0 9.37 0a26.88 26.88 0 0 1-2.7 0Zm0 1.2h2.69a3.78 3.78 0 0 1 1.24.23 2.21 2.21 0 0 1 1.27 1.27 3.67 3.67 0 0 1 .23 1.23v5.39a3.78 3.78 0 0 1-.23 1.24 2.21 2.21 0 0 1-1.27 1.27 3.77 3.77 0 0 1-1.24.22H4a3.77 3.77 0 0 1-1.24-.22 2.21 2.21 0 0 1-1.27-1.27 3.78 3.78 0 0 1-.23-1.24V3.93a3.67 3.67 0 0 1 .21-1.23 2.21 2.21 0 0 1 1.27-1.27A3.78 3.78 0 0 1 4 1.2c.68.01.89 0 2.67 0Z"
+                                transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
+                        </svg><span
+                            class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Instagram</span></a></li>
+                <li><a href="https://www.reddit.com/r/leagueoflegends/" target="_blank"
+                        data-testid="riotbar:footer:social-reddit"><svg width="20" height="20" viewBox="0 0 24 24">
+                            <title>reddit</title>
+                            <path fill="#FFF"
+                                d="M14.2 15.3c.1.1.1.2 0 .3-.5.5-1.2.7-2.2.7-1 0-1.8-.2-2.2-.7-.1-.1-.1-.2 0-.3.1-.1.2-.1.3 0 .4.4 1 .6 1.9.6.9 0 1.5-.2 1.9-.6h.3zm-3.4-2.4c0-.5-.4-.9-.9-.9s-.9.4-.9.9.4.9.9.9.9-.4.9-.9zM24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-5-.1c0-.9-.7-1.5-1.5-1.5-.4 0-.8.2-1.1.4-1.1-.7-2.5-1.1-4.1-1.2l.9-2.7 2.3.5c0 .7.6 1.3 1.3 1.3s1.3-.6 1.3-1.3-.6-1.3-1.3-1.3c-.5 0-1 .3-1.2.8l-2.5-.6c-.1 0-.2 0-.3.1l-1 3c-1.7 0-3.2.5-4.3 1.2-.3-.3-.6-.4-1-.4-.8.1-1.5.8-1.5 1.7 0 .6.3 1.1.8 1.3 0 .2-.1.3-.1.5 0 2.3 2.8 4.1 6.3 4.1s6.3-1.9 6.3-4.1v-.5c.4-.2.7-.7.7-1.3zm-4.9.1c-.5 0-.9.4-.9.9s.4.9.9.9.9-.4.9-.9c.1-.5-.4-.9-.9-.9z">
+                            </path>
+                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Reddit</span></a>
+                </li>
+            </ul>
+        </div>
+
+
+    </footer>
+
+</body>
+
+</html>

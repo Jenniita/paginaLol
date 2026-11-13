@@ -1,0 +1,214 @@
+:root {
+    /* Colores */
+    --color-azul-marino: #0A1428;
+    --color-azul-oscuro: #161F32;
+    --color-dorado: #C8AA6E;
+    --color-cian: #59C1DE;
+    --color-cian-nav: rgb(11, 196, 226);
+    --color-blanco: #FFFFFF;
+    --color-blanco-roto: #F9F9F9;
+    --color-gris-claro: #F0F0F0;
+
+    /* Fuentes */
+    --fuente-titulos: "Cinzel", Georgia, serif;
+    --fuente-texto: "Source Sans 3", Arial, sans-serif;
+    --fuente-nav: "Inter", Arial, sans-serif;
+}
+
+/* HEADER. Falta añadir los hover */
+/* HOVER DEL HEADER */
+
+/* He puesto aquí las propiedades de los a del nav para no tener que ir copiando una a una las clases de boostrap en cada a del nav */
+nav a {
+    font-family: var(--fuente-nav);
+    color: var(--color-blanco-roto);
+    font-weight: 600;
+    /* Para que se parezca más a la página original, ponemos letter spacing que he visto que tienen los apartados del nav */
+    letter-spacing: 0.4px;
+}
+
+nav button {
+    font-family: var(--fuente-nav);
+    text-transform: uppercase;
+    color: var(--color-blanco-roto);
+    /* Esto quitarlo, que se puede poner en boostrap */
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+body {
+    background-color: var(--color-azul-oscuro);
+}
+
+.btn {
+    background-color: var(--color-cian-nav);
+    color: var(--color-azul-marino);
+    letter-spacing: 0.4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--fuente-titulos);
+
+}
+
+h2 {
+    color: var(--color-azul-oscuro);
+}
+
+
+
+/* PRIMER SECTION */
+
+/* Botón amarillo del primer section */
+.amarillo {
+    background-color: var(--color-dorado);
+    /* Para que el borde, a diferencia del otro boton, no sea redondeado */
+    border-radius: 0;
+
+
+    /* Para conseguir el marco que tiene alrededor el boton amarillo del primer section usamos estas propiedes */
+    outline: 1px solid var(--color-blanco-roto);
+    outline-offset: 3px;
+}
+
+/* Como la card de boostrap viene con bordes, y en el fondo no lo quiero, lo quitamos desde el css */
+.card {
+    border: none;
+    border-radius: 0;
+}
+
+/* SEGUNDO SECTION */
+/* Le pongo el fondo aquí para que no me de problemas en la responsividad */
+.section-destacadas {
+    background-image: url("../img/fondoSegundoSection.png")
+}
+
+/* h4, que tienen las tarjetas del segundo section */
+h4 {
+    color: var(--color-azul-oscuro);
+    font-family: var(--fuente-texto);
+    font-weight: 700;
+}
+
+/* Tarjetas del segundo section */
+.tarjeta {
+    color: var(--color-azul-oscuro);
+    background-color: transparent;
+}
+
+.subtitulo-tarjetas {
+    color: var(--color-dorado);
+    font-weight: 600;
+    font-size: 0.85rem;
+}
+
+.tarjeta img {
+    border: none;
+    border-radius: 0;
+}
+
+.parrafo-card p {
+    margin-bottom: 0;
+}
+
+/* para quitar el fondo redondeado de la imagen de fondo del segundo section */
+.card-img {
+    border-radius: 0;
+}
+
+/* TERCER SECTION */
+.section-campeon {
+    background-image: url("../img/fondoTercerSection.webp");
+}
+
+.texto-campeon {
+    color: var(--color-azul-oscuro);
+}
+
+.section-campeon ul li {
+    color: var(--color-azul-oscuro);
+}
+
+.div-akali {
+    color: var(--color-azul-oscuro);
+}
+
+.div-akali h3 {
+    font-family: var(--fuente-texto);
+}
+
+/* CUARTO SECTION */
+.section-estilo {
+    background-image: url("../img/fondocuartoSection.webp");
+    background-size: cover;
+    background-position: center;
+}
+
+
+.section-estilo h2 {
+    color: var(--color-blanco-roto);
+}
+
+.section-estilo p {
+    color: var(--color-blanco-roto);
+}
+
+/* QUINTO SECTION */
+.section-formas {
+    background-image: url("../img/fondoquintoSection.webp");
+}
+
+.section-formas p {
+    color: var(--color-blanco-roto);
+}
+
+.section-formas h2 {
+    color: var(--color-blanco-roto);
+}
+
+.video-section {
+    border-radius: 50%;
+    width: 600px;
+    outline: 1px solid var(--color-blanco-roto);
+    outline-offset: 20px;
+}
+
+/* SEXTO SECTION */
+/* Para hacer el video menos alto usamos el aspect ratio */
+.section-jugar-final video {
+    width: 100%;
+    aspect-ratio: 3 / 1;
+}
+
+/* FOOTER */
+
+footer{
+    background-color: var(--color-azul-oscuro);
+}
+
+/* para que todos los iconos del footer sean blancos, cambiamos el color con fill */
+footer svg{
+    fill: var(--color-blanco);
+}
+
+.lista-iconos a{
+    /* Para que los a tengan fondo, ponemos estas propiedades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 13px;
+    background-color: #59C1DE;
+}
+
+
+/* RESPONSIVIDAD MOVIL */
+@media (max-width: 425px) {
+    video {
+        aspect-ratio: 4/5;
+    }
+}
