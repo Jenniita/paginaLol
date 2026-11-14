@@ -3,9 +3,9 @@
 const arrayRoles = [{ fondo: "img/fondoasesino.webp", texto: "akali", imgPersonaje: "img/akali.webp", descripcion: "La Asesina Sigilosa" },
 { fondo: "img/fondoYasuo.webp", texto: "yasuo", imgPersonaje: "img/yasuo.webp", descripcion: "La Espada sin Honor" },
 { fondo: "img/fondoLux.webp", texto: "lux", imgPersonaje: "img/lux.webp", descripcion: "La Dama Luminosa" },
-{ fondo: "img/fondoJinx.svg", texto: "jinx", imgPersonaje: "img/jinx.webp", descripcion: "La Bala Perdida" },
-{ fondo: "img/fondoSupp.webp", texto: "thresh", imgPersonaje: "img/thresh.webp", descripcion: "El Carcelero Implacable" },
-{ fondo: "img/fondoLeona.webp", texto: "leona", imgPersonaje: "img/leona.webp", descripcion: "El Amanecer Radiante" }]
+{ fondo: "img/fondoJinx.svg", texto: "jinx", imgPersonaje: "img/Jinx.webp", descripcion: "La Bala Perdida" },
+{ fondo: "img/fondoSupp.webp", texto: "thresh", imgPersonaje: "img/Thresh.webp", descripcion: "El Carcelero Implacable" },
+{ fondo: "img/fondoLeona.webp", texto: "leona", imgPersonaje: "img/Leona.webp", descripcion: "El Amanecer Radiante" }]
 
 //Seleccionamos del documento los li, que son los que tienen la imagen y el texto, para que cuando clique en ellos, cambien las cosas
 const roles = document.querySelectorAll(".btn-rol")
