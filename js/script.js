@@ -1,7 +1,7 @@
 
 //Array con todos los objetos y lo que vamos a cambiar cuando clickemos
-const arrayRoles = [{ fondo: "../img/fondoasesino.webp", texto: "akali", imgPersonaje: "../img/akali.webp", descripcion: "La Asesina Sigilosa" },
-{ fondo: "../img/fondoYasuo.webp", texto: "yasuo", imgPersonaje: "../img/yasuo.webp", descripcion: "La Espada sin Honor" },
+const arrayRoles = [{ fondo: "img/fondoasesino.webp", texto: "akali", imgPersonaje: "img/akali.webp", descripcion: "La Asesina Sigilosa" },
+{ fondo: "img/fondoYasuo.webp", texto: "yasuo", imgPersonaje: "img/yasuo.webp", descripcion: "La Espada sin Honor" },
 { fondo: "../img/fondoLux.webp", texto: "lux", imgPersonaje: "../img/lux.webp", descripcion: "La Dama Luminosa" },
 { fondo: "../img/fondoJinx.svg", texto: "jinx", imgPersonaje: "../img/jinx.webp", descripcion: "La Bala Perdida" },
 { fondo: "../img/fondoSupp.webp", texto: "thresh", imgPersonaje: "../img/thresh.webp", descripcion: "El Carcelero Implacable" },
