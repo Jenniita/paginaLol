@@ -21,6 +21,7 @@
 </head>
 
 <body>
+    <!-- HEADER CON EL NAV DE BOOSTRAP -->
     <header class="sticky-top">
         <nav class="navbar xl:navbar-expand bg-1 py-7 text-uppercase fs-sm">
             <div class="container-fluid px-6 md:px-11">
@@ -138,7 +139,7 @@
                             </li>
                         </ul>
                         <!-- El buscador -->
-                        <!-- En el MOVIL, el form se queda normal y se oculta en el escritorio-->
+                        <!-- En el MOVIL, el form se queda normal y se oculta en el escritorio. Como usamos md para la responsividad, lo que hay seguido es lo que se aplica a partir de 768px de ancho, por lo que el display none se aplica en ordenadores -->
                         <form class="hstack gap-2 md:d-none" role="search">
                             <input class="form-control" type="search" placeholder="Search" aria-label="Search" />
                             <button class="btn-solid btn-icon theme-secondary" type="submit">
@@ -146,7 +147,7 @@
                             </button>
                         </form>
 
-                        <!-- En el ESCRITORIO se queda solo la lupa, el icono, que despliega el buscador -->
+                        <!-- En el ESCRITORIO se queda solo la lupa, el icono, que despliega el buscador. En el escritorio es a la inversa, el md tiene esta vez display block y hace que se vea el icono -->
                         <div class="d-none md:d-block">
                             <button class="btn-icon" type="button" data-bs-toggle="menu"
                                 data-bs-placement="bottom lg:right" aria-expanded="false" aria-label="Abrir buscador">
@@ -178,6 +179,7 @@
     </header>
 
     <main>
+        <!-- PRIMER SECTION -->
         <section class="section-jugar">
             <div class="card theme-inverse">
                 <!-- El video, lo sacamos de la página del lol, copiando su vinculo y lo pegamos tal cual aquí, cambiando la clase que tiene por la de boostrap que queremos -->
@@ -215,7 +217,8 @@
 
         </section>
 
-        <section class="section-destacadas">
+        <!-- SEGUNDO SECTION -->
+        <section class="section-destacadas p-5">
             <div class="container">
                 <h2 class="py-9 fst-italic text-uppercase">Noticias Destacadas</h2>
                 <div class="grid grid-cols-1 md:grid-cols-3">
@@ -280,64 +283,66 @@
             </div>
         </section>
 
-        <section class="section-campeon py-12">
+        <!-- TERCER SECTION -->
+        <section class="section-campeon py-12 p-5">
             <div class="container">
                 <!-- Para la responsividad ponemos que en el movil se ponga en columna, y en el ordenador flex-row. La explicación del md y la responsividad me la ha explicado Claude, siendo parte de las clases de boostrap -->
                 <div class="d-flex flex-column md:flex-row align-items-center justify-content-center">
-                    <div>
-                        <div class="text-center ">
-                            <div class="row justify-content-center">
-                                <p class="text-uppercase fs-lg">Elige a tu</p>
-                                <h2 class="fs-6xl fst-italic">campeon</h2>
-                            </div>
 
-                            <div class="row justify-content-center">
-                                <p class="texto-campeon col-12 md:col-8 my-9 fs-lg lh-lg">Lanzarse en medio del combate,
-                                    apoyar a
-                                    tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
-                            </div>
-
-                            <div class="d-grid md:d-flex md:justify-content-center gap-4">
-                                <button class="btn btn-campeones px-9 py-6  md:px-12 text-uppercase">Descubrir
-                                    campeones</button>
-                                <button class="btn btn-jugar-ahora-akali px-9 py-6 md:px-12 text-uppercase">Jugar
-                                    Ahora</button>
-                            </div>
-
-                            <!-- Añadimos flex-wrap al ul para que en el movil los iconos se apilen uno debajo del otro -->
-                            <ul class="d-flex justify-content-center flex-wrap gap-6 list-unstyled mt-9 fs-sm">
-                                <li class="btn-rol activo">
-                                    <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
-                                    <p>Asesinos</p>
-                                </li>
-                                <li class="btn-rol">
-                                    <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
-                                    <p>Luchadores</p>
-                                </li>
-                                <li class="btn-rol">
-                                    <img src="img/iconomago.webp" class="img-fluid" alt="...">
-                                    <p>Magos</p>
-                                </li>
-                                <li class="btn-rol">
-                                    <img src="img/iconotirador.webp" class="img-fluid" alt="...">
-                                    <p>Tiradores</p>
-                                </li>
-                                <li class="btn-rol">
-                                    <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
-                                    <p>Apoyos</p>
-                                </li>
-                                <li class="btn-rol">
-                                    <img src="img/iconotanque.webp" class="img-fluid" alt="...">
-                                    <p>Tanques</p>
-                                </li>
-                            </ul>
+                    <div class="text-center ">
+                        <div class="row justify-content-center">
+                            <p class="text-uppercase fs-lg">Elige a tu</p>
+                            <h2 class="fs-5xl fst-italic">campeón</h2>
                         </div>
+
+                        <div class="row justify-content-center">
+                            <p class="texto-campeon col-12 md:col-8 my-9 fs-md">Lanzarse en medio del combate,
+                                apoyar a
+                                tus aliados... Prefieras lo que prefieras, encontrarás tu sitio en la Grieta.</p>
+                        </div>
+
+                        <div class="d-grid md:d-flex md:justify-content-center gap-4">
+                            <button class="btn btn-campeones px-9 py-6 md:px-12 text-uppercase">Descubrir más
+                                campeones</button>
+                            <button class="btn btn-jugar-ahora-akali px-9 py-6 md:px-12 text-uppercase">Jugar
+                                Ahora</button>
+                        </div>
+
+                        <!-- Añadimos flex-wrap al ul para que en el movil los iconos se apilen uno debajo del otro -->
+                        <ul class="d-flex justify-content-center flex-wrap gap-6 list-unstyled mt-9 fs-sm">
+                            <li class="btn-rol activo">
+                                <img src="img/iconoasesino.webp" class="img-fluid" alt="...">
+                                <p>Asesinos</p>
+                            </li>
+                            <li class="btn-rol">
+                                <img src="img/iconoluchador.webp" class="img-fluid" alt="...">
+                                <p>Luchadores</p>
+                            </li>
+                            <li class="btn-rol">
+                                <img src="img/iconomago.webp" class="img-fluid" alt="...">
+                                <p>Magos</p>
+                            </li>
+                            <li class="btn-rol">
+                                <img src="img/iconotirador.webp" class="img-fluid" alt="...">
+                                <p>Tiradores</p>
+                            </li>
+                            <li class="btn-rol">
+                                <img src="img/iconoapoyo.webp" class="img-fluid" alt="...">
+                                <p>Apoyos</p>
+                            </li>
+                            <li class="btn-rol">
+                                <img src="img/iconotanque.webp" class="img-fluid" alt="...">
+                                <p>Tanques</p>
+                            </li>
+                        </ul>
                     </div>
+
 
                     <div>
                         <img src="img/akali.webp" class="img-fluid personaje" alt="...">
                         <div class="div-akali text-center">
-                            <h3 class="text-uppercase fst-italic fw-bold mb-3 nombre-personaje">Akali</h3>
+                            <!-- Como vi en la pagina que el nombre era un span, lo cambié aqui tambien, antes tenia un h3 -->
+                            <span class="nombre-personaje fs-lg">Akali</span>
                             <p class="desc-personaje">La Asesina Sigilosa</p>
                         </div>
                     </div>
@@ -348,22 +353,24 @@
 
 
 
-
-        <section class="section-estilo py-12">
+        <!-- CUARTO SECTION -->
+        <section class="section-estilo py-12 p-5">
             <div class="container">
-                <div class="d-flex flex-column md:flex-row align-items-center justify-content-center gap-12">
+                <!-- con flex-colum-reverse, podemos invertir el orden de la columna, para que asi en el movil se vea antes el texto y luego la imagen. Es una clase de boostrap super util -->
+                <div
+                    class="d-flex flex-column-reverse flex-column md:flex-row align-items-center justify-content-center gap-12 ">
                     <div class="imagen-estilo">
                         <img src="img/akali2.webp" class="img-fluid" alt="...">
                     </div>
 
                     <div class="texto-estilo text-start">
-                        <p>Aplasta con</p>
-                        <h2>Estilo</h2>
-                        <p class="texto-campeon my-6 fs-lg">Personaliza tu experiencia con aspectos para tus campeones
+                        <p class="p-estilo fs-lg m-0">Aplasta con</p>
+                        <P class="p-estilo fs-5xl ">Estilo</P>
+                        <p class="texto-campeon my-6 fs-md">Personaliza tu experiencia con aspectos para tus campeones
                             favoritos.</p>
 
                         <div class="d-grid md:d-block">
-                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                            <button class="btn btn-campeones  py-6 text-sm md:px-12 text-uppercase">Jugar Ahora</button>
                         </div>
                     </div>
                 </div>
@@ -372,36 +379,38 @@
 
         </section>
 
-        <section class="section-formas py-12">
+        <!-- QUINTO SECTION -->
+        <section class="section-formas py-12 p-5">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-12 md:col-6">
-                        <div class="text-center text-uppercase">
+                <div class="d-flex flex-column md:flex-row align-items-center justify-content-between">
+                    <div class="text-center">
+                        <div class="row justify-content-center text-uppercase">
                             <p>Varias formas de</p>
-                            <h3>Jugar</h3>
-
-                            <div class="d-grid md:d-block text-center mt-9">
-                                <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar
-                                    Gratis</button>
-                            </div>
+                            <h2 class="fs-5xl">Jugar</h2>
                         </div>
 
-                        <ul class="d-flex text-center justify-content-center gap-6 list-unstyled mt-9 text-uppercase">
-                            <li>
+                        <div class="d-grid md:justify-content-center mt-9">
+                            <button class="btn btn-campeones px-9 py-6 text-sm md:px-12 text-uppercase">Jugar
+                                Ahora</button>
+                        </div>
+
+                        <!-- uso un display grid para que se pongan en columna de 4. Anteriormente tenia puesto que en movil se vieran en columnas de 2, pero como en la pagina original en el movil se ven aun en columna de 4, lo modifiqué.-->
+                        <ul class="d-grid grid-cols-4 list-unstyled mt-9 fs-xs text-uppercase  gap-4">
+                            <li class="btn-modo activo">
                                 <img src="img/grieta.webp" class="img-fluid" alt="...">
-                                <p class="mt-4">Grieta del invocador</p>
+                                <p class="p-modos-juego">Grieta del invocador</p>
                             </li>
-                            <li>
+                            <li class="btn-modo">
                                 <img src="img/aram.webp" class="img-fluid" alt="...">
-                                <p class="mt-4">Aram</p>
+                                <p class="p-modos-juego">Aram</p>
                             </li>
-                            <li>
+                            <li class="btn-modo">
                                 <img src="img/aramcaos.webp" class="img-fluid" alt="...">
-                                <p class="mt-4">Aram:Caos</p>
+                                <p class="p-modos-juego">Aram:Caos</p>
                             </li>
-                            <li>
+                            <li class="btn-modo">
                                 <img src="img/tft.webp" class="img-fluid" alt="...">
-                                <p class="mt-4">Teamfigth tactics</p>
+                                <p class="p-modos-juego">Teamfigth tactics</p>
                             </li>
                         </ul>
 
@@ -415,8 +424,11 @@
                                 type="video/mp4">
                         </video>
                         <div class="text-center mt-9">
-                            <h3 class="text-uppercase fst-italic fw-bold mb-3">El modo de juego más popular</h3>
-                            <p>Despeja tu calle, lánzate a épicos combates de equipo cinco contra cinco y destruye el
+                            <!-- Aqui cambié tambien la etiqueta, igual que como lo tiene la página original -->
+                            <span class="modo-juego fs-lg">El modo de juego más
+                                popular</span>
+                            <p class="desc-modo-juego">Despeja tu calle, lánzate a épicos combates de equipo cinco
+                                contra cinco y destruye el
                                 nexo
                                 enemigo antes de que destruyan el tuyo.</p>
                         </div>
@@ -428,7 +440,7 @@
 
         </section>
 
-
+        <!-- SEXTO SECTION -->
         <section class="section-jugar-final">
             <div class="card theme-inverse">
                 <!-- El video, lo sacamos de la página del lol, copiando su vinculo y lo pegamos tal cual aquí, cambiando la clase que tiene por la de boostrap que queremos -->
@@ -442,7 +454,8 @@
                 <div class="card-img-overlay d-flex align-items-center">
                     <div class="container text-center">
                         <div class="d-grid md:d-block text-center">
-                            <button class="btn amarillo px-9 py-6 text-sm md:px-12 text-uppercase">Jugar Gratis</button>
+                            <button class="btn btn-campeones px-9 py-6 text-sm md:px-12 text-uppercase">Jugar
+                                Gratis</button>
                         </div>
 
                     </div>
@@ -457,95 +470,124 @@
 
     </main>
 
+
+
+    <!-- FOOTER -->
     <footer class="d-flex flex-column text-center gap-6 pb-7">
-        <!-- Nav que hay debajo -->
-        <nav class="navbar xl:navbar-expand bg-1 py-7 text-uppercase fs-sm">
-            <div class="container-fluid px-6 md:px-11 justify-content-center">
-                <ul class="nav navbar-nav mx-auto">
-                    <!-- Cada elemento de la lista -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Acerca de League of Legends</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Estado del Servidor</a>
-                    </li>
-                    <!-- Cada elemento de la lista -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Asistencia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Web lol Esports</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Descarga la aplicación para móviles de riot mobile</a>
-                    </li>
+        <!-- Para el "nav" del footer, he copiado el nav del header, ajustando etiquetas y clases. Sobre todo para mantener el mismo estilo que tienen los dos -->
+        <div class="bg-1 fs-sm">
+            <div class="footer-barra py-7 text-uppercase fs-sm">
+                <div class="container mb-2 md:mb-0">
+                    <!-- Lista de enlaces -->
+                    <ul class="d-flex flex-column md:flex-row nav me-auto justify-content-center">
+                        <li>
+                            <a class="nav-link" href="">Acerca de League of Legends</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="">Estado del servidor</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="">Asistencia</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="">Web lol esports</a>
+                        </li>
+                        <li>
+                            <a class="nav-link" href="">Descargar la aplicación para móviles de riot mobile</a>
+                        </li>
+                    </ul>
 
-                </ul>
+                </div>
             </div>
-        </nav>
-        <div class="py-4">
-            <ul class="lista-iconos list-unstyled d-flex justify-content-center align-items-center gap-4 m-0">
-                <li><a href="https://www.youtube.com/LeagueofLegendsES" target="_blank"
-                        data-testid="riotbar:footer:social-youtube"><svg width="20" height="20"
-                            viewBox="0 0 16.67 11.67">
-                            <title>youtube</title>
-                            <path
-                                d="M14.85.36a2.08 2.08 0 0 1 1.47 1.47 20.5 20.5 0 0 1 .34 4 22.19 22.19 0 0 1-.34 4 2.1 2.1 0 0 1-1.47 1.47 51.13 51.13 0 0 1-6.52.34 48.46 48.46 0 0 1-6.52-.36A2.07 2.07 0 0 1 .34 9.82a23.82 23.82 0 0 1 0-8A2.11 2.11 0 0 1 1.81.34a49.68 49.68 0 0 1 6.52-.35 48.31 48.31 0 0 1 6.52.37Zm-3.84 5.48-4.34 2.5v-5Z">
-                            </path>
-                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Youtube</span></a>
-                </li>
-                <li><a href="https://twitter.com/lol_es" target="_blank"
-                        data-testid="riotbar:footer:social-twitter"><svg width="20" height="20" viewBox="0 0 1200 1227">
-                            <title>twitter</title>
-                            <path
-                                d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z">
-                            </path>
-                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Twitter</span></a>
-                </li>
-                <li><a href="https://www.instagram.com/leagueoflegends/" target="_blank"
-                        data-testid="riotbar:footer:social-instagram"><svg width="20" height="20"
-                            viewBox="0 0 13.26 13.3">
-                            <title>instagram</title>
-                            <path
-                                d="M6.67 3.24a3.43 3.43 0 1 0 3.42 3.44 3.43 3.43 0 0 0-3.42-3.44Zm0 5.65a2.22 2.22 0 1 1 2.22-2.22 2.21 2.21 0 0 1-2.22 2.22Z"
-                                transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
-                            <path d="M11 3.08a.8.8 0 1 1-.8-.8.8.8 0 0 1 .8.8Z" transform="translate(-.04 .05)"
-                                style="fill:#fdfefe"></path>
-                            <path
-                                d="M6.67 0H3.92A5 5 0 0 0 2.3.31a3.31 3.31 0 0 0-1.18.77 3.31 3.31 0 0 0-.77 1.18A5.29 5.29 0 0 0 0 3.88v5.5A5.22 5.22 0 0 0 .35 11a3.35 3.35 0 0 0 .77 1.19 3.42 3.42 0 0 0 1.18.76 4.75 4.75 0 0 0 1.62.31h5.5a4.75 4.75 0 0 0 1.58-.32 3.15 3.15 0 0 0 1.18-.76A3.35 3.35 0 0 0 13 11a5 5 0 0 0 .31-1.61V3.88A5 5 0 0 0 13 2.26a3.46 3.46 0 0 0-2-2A5 5 0 0 0 9.37 0a26.88 26.88 0 0 1-2.7 0Zm0 1.2h2.69a3.78 3.78 0 0 1 1.24.23 2.21 2.21 0 0 1 1.27 1.27 3.67 3.67 0 0 1 .23 1.23v5.39a3.78 3.78 0 0 1-.23 1.24 2.21 2.21 0 0 1-1.27 1.27 3.77 3.77 0 0 1-1.24.22H4a3.77 3.77 0 0 1-1.24-.22 2.21 2.21 0 0 1-1.27-1.27 3.78 3.78 0 0 1-.23-1.24V3.93a3.67 3.67 0 0 1 .21-1.23 2.21 2.21 0 0 1 1.27-1.27A3.78 3.78 0 0 1 4 1.2c.68.01.89 0 2.67 0Z"
-                                transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
-                        </svg><span
-                            class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Instagram</span></a></li>
-                <li><a href="https://www.reddit.com/r/leagueoflegends/" target="_blank"
-                        data-testid="riotbar:footer:social-reddit"><svg width="20" height="20" viewBox="0 0 24 24">
-                            <title>reddit</title>
-                            <path fill="#FFF"
-                                d="M14.2 15.3c.1.1.1.2 0 .3-.5.5-1.2.7-2.2.7-1 0-1.8-.2-2.2-.7-.1-.1-.1-.2 0-.3.1-.1.2-.1.3 0 .4.4 1 .6 1.9.6.9 0 1.5-.2 1.9-.6h.3zm-3.4-2.4c0-.5-.4-.9-.9-.9s-.9.4-.9.9.4.9.9.9.9-.4.9-.9zM24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-5-.1c0-.9-.7-1.5-1.5-1.5-.4 0-.8.2-1.1.4-1.1-.7-2.5-1.1-4.1-1.2l.9-2.7 2.3.5c0 .7.6 1.3 1.3 1.3s1.3-.6 1.3-1.3-.6-1.3-1.3-1.3c-.5 0-1 .3-1.2.8l-2.5-.6c-.1 0-.2 0-.3.1l-1 3c-1.7 0-3.2.5-4.3 1.2-.3-.3-.6-.4-1-.4-.8.1-1.5.8-1.5 1.7 0 .6.3 1.1.8 1.3 0 .2-.1.3-.1.5 0 2.3 2.8 4.1 6.3 4.1s6.3-1.9 6.3-4.1v-.5c.4-.2.7-.7.7-1.3zm-4.9.1c-.5 0-.9.4-.9.9s.4.9.9.9.9-.4.9-.9c.1-.5-.4-.9-.9-.9z">
-                            </path>
-                        </svg><span class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Reddit</span></a>
-                </li>
-            </ul>
-        </div>
 
-        <img src="img/logoRiot.png" class="img-fluid align-self-center mb-4" alt="Logo de Riot Games" width="120"
-            height="40">
+            <div class="container">
+                <div class="d-flex flex-column gap-6 py-6">
+                    <!-- Como no me dejaba sacar los iconos de la página, los copié directamente -->
+                    <ul class="lista-iconos list-unstyled d-flex justify-content-center align-items-center gap-4 m-0">
+                        <li><a href="https://www.youtube.com/LeagueofLegendsES" target="_blank"
+                                data-testid="riotbar:footer:social-youtube"><svg width="20" height="20"
+                                    viewBox="0 0 16.67 11.67">
+                                    <title>youtube</title>
+                                    <path
+                                        d="M14.85.36a2.08 2.08 0 0 1 1.47 1.47 20.5 20.5 0 0 1 .34 4 22.19 22.19 0 0 1-.34 4 2.1 2.1 0 0 1-1.47 1.47 51.13 51.13 0 0 1-6.52.34 48.46 48.46 0 0 1-6.52-.36A2.07 2.07 0 0 1 .34 9.82a23.82 23.82 0 0 1 0-8A2.11 2.11 0 0 1 1.81.34a49.68 49.68 0 0 1 6.52-.35 48.31 48.31 0 0 1 6.52.37Zm-3.84 5.48-4.34 2.5v-5Z">
+                                    </path>
+                                </svg><span
+                                    class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Youtube</span></a>
+                        </li>
+                        <li><a href="https://twitter.com/lol_es" target="_blank"
+                                data-testid="riotbar:footer:social-twitter"><svg width="20" height="20"
+                                    viewBox="0 0 1200 1227">
+                                    <title>twitter</title>
+                                    <path
+                                        d="M714.163 519.284 1160.89 0h-105.86L667.137 450.887 357.328 0H0l468.492 681.821L0 1226.37h105.866l409.625-476.152 327.181 476.152H1200L714.137 519.284h.026ZM569.165 687.828l-47.468-67.894-377.686-540.24h162.604l304.797 435.991 47.468 67.894 396.2 566.721H892.476L569.165 687.854v-.026Z">
+                                    </path>
+                                </svg><span
+                                    class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Twitter</span></a>
+                        </li>
+                        <li><a href="https://www.instagram.com/leagueoflegends/" target="_blank"
+                                data-testid="riotbar:footer:social-instagram"><svg width="20" height="20"
+                                    viewBox="0 0 13.26 13.3">
+                                    <title>instagram</title>
+                                    <path
+                                        d="M6.67 3.24a3.43 3.43 0 1 0 3.42 3.44 3.43 3.43 0 0 0-3.42-3.44Zm0 5.65a2.22 2.22 0 1 1 2.22-2.22 2.21 2.21 0 0 1-2.22 2.22Z"
+                                        transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
+                                    <path d="M11 3.08a.8.8 0 1 1-.8-.8.8.8 0 0 1 .8.8Z" transform="translate(-.04 .05)"
+                                        style="fill:#fdfefe"></path>
+                                    <path
+                                        d="M6.67 0H3.92A5 5 0 0 0 2.3.31a3.31 3.31 0 0 0-1.18.77 3.31 3.31 0 0 0-.77 1.18A5.29 5.29 0 0 0 0 3.88v5.5A5.22 5.22 0 0 0 .35 11a3.35 3.35 0 0 0 .77 1.19 3.42 3.42 0 0 0 1.18.76 4.75 4.75 0 0 0 1.62.31h5.5a4.75 4.75 0 0 0 1.58-.32 3.15 3.15 0 0 0 1.18-.76A3.35 3.35 0 0 0 13 11a5 5 0 0 0 .31-1.61V3.88A5 5 0 0 0 13 2.26a3.46 3.46 0 0 0-2-2A5 5 0 0 0 9.37 0a26.88 26.88 0 0 1-2.7 0Zm0 1.2h2.69a3.78 3.78 0 0 1 1.24.23 2.21 2.21 0 0 1 1.27 1.27 3.67 3.67 0 0 1 .23 1.23v5.39a3.78 3.78 0 0 1-.23 1.24 2.21 2.21 0 0 1-1.27 1.27 3.77 3.77 0 0 1-1.24.22H4a3.77 3.77 0 0 1-1.24-.22 2.21 2.21 0 0 1-1.27-1.27 3.78 3.78 0 0 1-.23-1.24V3.93a3.67 3.67 0 0 1 .21-1.23 2.21 2.21 0 0 1 1.27-1.27A3.78 3.78 0 0 1 4 1.2c.68.01.89 0 2.67 0Z"
+                                        transform="translate(-.04 .05)" style="fill:#fdfefe;fill-rule:evenodd"></path>
+                                </svg><span
+                                    class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Instagram</span></a>
+                        </li>
+                        <li><a href="https://www.reddit.com/r/leagueoflegends/" target="_blank"
+                                data-testid="riotbar:footer:social-reddit"><svg width="20" height="20"
+                                    viewBox="0 0 24 24">
+                                    <title>reddit</title>
+                                    <path fill="#FFF"
+                                        d="M14.2 15.3c.1.1.1.2 0 .3-.5.5-1.2.7-2.2.7-1 0-1.8-.2-2.2-.7-.1-.1-.1-.2 0-.3.1-.1.2-.1.3 0 .4.4 1 .6 1.9.6.9 0 1.5-.2 1.9-.6h.3zm-3.4-2.4c0-.5-.4-.9-.9-.9s-.9.4-.9.9.4.9.9.9.9-.4.9-.9zM24 12c0 6.6-5.4 12-12 12S0 18.6 0 12 5.4 0 12 0s12 5.4 12 12zm-5-.1c0-.9-.7-1.5-1.5-1.5-.4 0-.8.2-1.1.4-1.1-.7-2.5-1.1-4.1-1.2l.9-2.7 2.3.5c0 .7.6 1.3 1.3 1.3s1.3-.6 1.3-1.3-.6-1.3-1.3-1.3c-.5 0-1 .3-1.2.8l-2.5-.6c-.1 0-.2 0-.3.1l-1 3c-1.7 0-3.2.5-4.3 1.2-.3-.3-.6-.4-1-.4-.8.1-1.5.8-1.5 1.7 0 .6.3 1.1.8 1.3 0 .2-.1.3-.1.5 0 2.3 2.8 4.1 6.3 4.1s6.3-1.9 6.3-4.1v-.5c.4-.2.7-.7.7-1.3zm-4.9.1c-.5 0-.9.4-.9.9s.4.9.9.9.9-.4.9-.9c.1-.5-.4-.9-.9-.9z">
+                                    </path>
+                                </svg><span
+                                    class="_1Pt2Pse0Ro+9JPfl49jwGg== image-alt-text visually-hidden">Reddit</span></a>
+                        </li>
+                    </ul>
 
-        <p class="w-50 align-self-center">™ & © 2026 Riot Games, Inc. Todos los derechos reservados. Riot Games, League
-            of Legends y PvP.net son marcas
-            comerciales o marcas registradas de Riot Games, Inc.</p>
 
-        <div class="text-uppercase fw-bold">
-            <ul class="list-unstyled d-flex flex-wrap justify-content-center gap-4">
-                <li>Aviso de privacidad</li>
-                <li>Términos de uso</li>
-                <li>Políticas de cookies</li>
-                <li>Información de la empresa</li>
-                <li>Prefencias de cookies</li>
-            </ul>
-        </div>
+                    <img src="img/logoRiot.png" class="img-riot img-fluid align-self-center mb-4"
+                        alt="Logo de Riot Games" width="120" height="40">
 
-        <img src="img/imagenfinalfooter.png" class="img-fluid align-self-center mb-4" alt="Logo de Riot Games"
-            width="335" height="100">
+                    <p class="texto-copy fs-xs">™ & © 2026 Riot Games, Inc. Todos los derechos reservados. Riot Games,
+                        League
+                        of Legends y PvP.net son marcas
+                        comerciales o marcas registradas de Riot Games, Inc.</p>
+
+                        <!-- En este div también he copiado clases con propiedades que tiene el nav, para que los tres tengan homogeneidad y el hover se vea igual en los tres -->
+                    <div class="div-privacidad text-uppercase fw-bold">
+                        <ul class="list-unstyled d-flex flex-column md:flex-row nav justify-content-center gap-10">
+                            <li>
+                                <a class="nav-link" href="">Aviso de privacidad</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="">Términos de uso</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="">Política de cookies</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="">Información de la empresa</a>
+                            </li>
+                            <li>
+                                <a class="nav-link" href="">Preferencias de cookies</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <img src="img/imagenfinalfooter.png" class="img-fluid align-self-center mb-4"
+                        alt="Logo de Riot Games" width="335" height="100">
+
+                </div>
+
+            </div>
+
 
     </footer>
 

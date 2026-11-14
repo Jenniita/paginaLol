@@ -10,6 +10,7 @@
     --color-blanco-roto: #F9F9F9;
     --color-gris-claro: #F0F0F0;
     --color-gris: rgb(41, 41, 41);
+    --color-gris-hover: rgb(97, 96, 96);
     --color-negro: rgb(17, 17, 17);
 
     /* Fuentes */
@@ -26,8 +27,8 @@ header .nav-link:hover {
     background-color: var(--color-gris);
     color: var(--color-dorado);
     border-bottom: 3px solid var(--color-cian-nav);
-    transition: background-color 0.2s, color 0.2s, border-color 0.2s;
-    /* para redondear solo el fondo y no el borde */
+    transition: 0.2s;
+    /* para redondear solo el fondo y el borde azul no quede redondeado */
     border-radius: 8px 8px 0 0;
 }
 
@@ -54,6 +55,7 @@ body {
     background-color: var(--color-azul-oscuro);
 }
 
+
 /* boton de jugar ahora del header */
 .btn-jugar-ahora {
     background-color: var(--color-cian-nav);
@@ -79,9 +81,30 @@ h2 {
     color: var(--color-azul-oscuro);
 }
 
+/* Como la pagina del lol tiene espaciado entre lineas, para no ir poniendo una por una en el html, cojo la clase de boostrap y la pongo aqui directamente */
+p {
+    font-family: var(--fuente-texto);
+    line-height: var(--bs-line-height-lg)
+}
+
+button {
+    font-family: var(--fuente-texto);
+}
+
 nav {
     background-color: var(--color-negro);
 }
+
+span {
+    text-transform: uppercase;
+    font-style: italic;
+    font-weight: bold;
+    /* No se por qué no se aplica el margin bottom */
+    margin-bottom: 3rem;
+    font-family: var(--fuente-titulos);
+}
+
+
 
 
 
@@ -182,21 +205,15 @@ h4 {
     color: var(--color-azul-marino);
 }
 
-.section-campeon p {
-    font-family: var(--fuente-texto);
-}
 
-.section-campeon ul li {
+.btn-rol{
     text-transform: uppercase;
+    color: var(--color-azul-oscuro);
+    opacity: 50%;
 }
 
 .texto-campeon {
     color: var(--color-azul-oscuro);
-}
-
-.section-campeon ul li {
-    color: var(--color-azul-oscuro);
-    opacity: 50%;
 }
 
 .div-akali {
@@ -204,7 +221,7 @@ h4 {
 }
 
 .div-akali h3 {
-    font-family: var(--fuente-texto);
+    font-family: var(--fuente-titulos);
 }
 
 .btn-campeones {
@@ -218,6 +235,9 @@ h4 {
     border-radius: 0;
     color: var(--color-azul-marino);
 }
+
+
+
 
 /* HOVER ICONOS */
 .section-campeon ul li:hover {
@@ -236,13 +256,15 @@ h4 {
     background-position: center;
 }
 
-
-.section-estilo h2 {
+.section-estilo p {
     color: var(--color-blanco-roto);
 }
 
-.section-estilo p {
-    color: var(--color-blanco-roto);
+/* le ponemos la fuente de titulo a estos parrafos en concreto porque tienen que resaltar. De igual forma está en la página original */
+.p-estilo {
+    font-family: var(--fuente-titulos);
+    font-weight: 600;
+    font-style: italic;
 }
 
 /* QUINTO SECTION */
@@ -256,9 +278,28 @@ h4 {
     color: var(--color-blanco-roto);
 }
 
+.p-modos-juego {
+    margin-top: 1rem;
+}
+
 .section-formas h2 {
     color: var(--color-blanco-roto);
 }
+
+/* Igual que he hecho con los iconos de los roles, vamos a cambiar opacidades */
+/* HOVER ICONOS */
+/* De normal están con la opacidad a la mitad */
+.btn-modo{
+    opacity: 50%;
+}
+
+/* Cuando se pasa el ratón por encima, la opacidad sube al 100% y se hace más grande */
+.section-formas ul li:hover {
+    opacity: 100%;
+    scale: 120%;
+    transition: 0.3s;
+}
+
 
 .video-section {
     border-radius: 50%;
@@ -299,9 +340,57 @@ footer svg {
     background-color: var(--color-gris);
 }
 
-footer nav {
+.footer-barra {
     background-color: var(--color-gris);
 }
+
+footer .nav-link {
+    font-family: var(--fuente-nav);
+    color: var(--color-blanco-roto);
+    font-weight: 600;
+    /* Para que se parezca más a la página original, ponemos letter spacing que he visto que tienen los apartados del nav */
+    letter-spacing: 0.4px;
+    /* Para que el texto salte a la siguiente linea en el movil */
+    text-wrap: wrap;
+
+}
+
+.texto-copy{
+    opacity: 50%;
+}
+
+/* HOVER DEL FOOTER */
+/* Al pasar el ratón: fondo gris*/
+footer .nav-link:hover {
+    background-color: var(--color-gris-hover);
+    transition: 0.2s;
+
+}
+
+/* Le bajamos la opacidad para que esté más claro, como en la página original */
+.img-riot{
+    opacity: 50%;
+}
+
+.img-riot:hover{
+    opacity: 100%;
+}
+
+.div-privacidad{
+    font-family: var(--fuente-nav);
+}
+
+.div-privacidad .nav-link:hover{
+    background-color: var(--color-gris-hover);
+    transition: 0.2s;
+}
+
+/* CLASE PARA EL JS */
+/* El botón que tenga esta clase, tendrá la opacidad al 100%, que será el que esté seleccionado */
+.activo{
+    opacity: 100%;
+}
+
 
 
 /* RESPONSIVIDAD MOVIL */
@@ -310,6 +399,12 @@ footer nav {
         aspect-ratio: 4/5;
     }
 
+    /* Sinceramente, no sabia como poner que se viera con más altura el video en el movil y probando así he conseguido que se vea como quiero. */
+    .section-jugar-final video {
+        aspect-ratio: calc(1);
+    }
+
+    /* El video redondo, le quito un poco del outline offset porque sino en el movil queda con demasiado hueco  */
     .video-section {
         outline-offset: 10px;
 
